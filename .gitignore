@@ -1,2 +1,4 @@
 ## Ignore Visual Studio code files,
 .vscode/
+## Ignore geckodriver.log
+geckodriver.log
