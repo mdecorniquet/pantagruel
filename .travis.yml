@@ -1,6 +1,8 @@
 language: python
+env:
+  - MOZ_HEADLESS=1
 addons:
-  firefox: "60.0.2"
+  firefox: "latest"
 python:
   - "2.7"
   - "3.5"
