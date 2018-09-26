@@ -15,13 +15,13 @@ before_install:
   - export DISPLAY=127.0.0.1:99
 install:
   - pip install -r requirements.txt
-# before_script:
-  # - python manage.py runserver &
-  # - sleep 3
+before_script:
+  - python manage.py runserver &
+  - sleep 3
 script:
   - pwd
   - ls
   - ls tests/
-  - pytest --debug
+  - pytest --collect-in-virtualenv --debug
   - cat pytestdebug.log
 
