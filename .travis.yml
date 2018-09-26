@@ -4,7 +4,6 @@ env:
 addons:
   firefox: "latest"
 python:
-  - "2.7"
   - "3.5"
   - "3.6"
   - "3.7-dev"
@@ -17,7 +16,7 @@ before_install:
 install:
   - pip install -r requirements.txt
 before_script:
-  - python manage.py runserver
+  - python manage.py runserver &
   - sleep 3
 script:
   - pytest
