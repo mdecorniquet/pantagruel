@@ -2,5 +2,5 @@ from selenium import webdriver
 
 # def test_django():
 browser = webdriver.Firefox()
-browser.get(r'http://localhost:8000')
+browser.get('http://localhost:8000')
 assert 'Django' in browser.title

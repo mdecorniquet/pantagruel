@@ -2,3 +2,5 @@
 .vscode/
 ## Ignore geckodriver.log
 geckodriver.log
+pytestdebug.log
+*.pyc

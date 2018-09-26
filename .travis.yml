@@ -20,4 +20,6 @@ before_script:
   - sleep 3
 script:
   - pwd
+  - ls
+  - ls tests/
   - pytest tests/
