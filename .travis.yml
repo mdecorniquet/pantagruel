@@ -22,4 +22,6 @@ script:
   - pwd
   - ls
   - ls tests/
-  - pytest tests/test_pantagruel.py
+  - pytest --debug
+  - cat pytestdebug.log
+
