@@ -22,6 +22,6 @@ script:
   - pwd
   - ls
   - ls tests/
-  - pytest --collect-in-virtualenv --debug
+  - pytest --disable-warnings
   - cat pytestdebug.log
 
