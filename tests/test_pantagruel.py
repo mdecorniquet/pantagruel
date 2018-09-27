@@ -1,6 +1,4 @@
-from selenium import webdriver
-
-def test_django():
-    browser = webdriver.Firefox()
-    browser.get('http://localhost:8000')
-    assert 'Django' in browser.title
+class TestWeb:
+    def test_app_is_pantagruel(self, browser):
+        browser.get('http://localhost:8000')
+        assert 'Pantagruel' in browser.title
