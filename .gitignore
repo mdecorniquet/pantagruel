@@ -4,3 +4,4 @@
 geckodriver.log
 pytestdebug.log
 *.pyc
+db.sqlite3
