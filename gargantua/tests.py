@@ -1,5 +1,6 @@
 from django.urls import resolve
 from django.http import HttpRequest
+from django.template.loader import render_to_string
 
 from gargantua.views import home_page
 
@@ -14,6 +15,6 @@ class TestHomePage:
     def test_home_page_returns_correct_html(self):
         request = HttpRequest()
         response = home_page(request)
-        assert response.content.startswith(b'<html>')
-        assert b'<title>Pantagruel</title>' in response.content
-        assert response.content.endswith(b'</html>')
+        expected_html = render_to_string('home.html')
+        assert response.content.decode() == expected_html
+
