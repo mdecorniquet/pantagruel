@@ -3,6 +3,7 @@ from django.http import HttpRequest
 from django.template.loader import render_to_string
 
 from gargantua.views import home_page
+# from gargantua.views import uploadcsv
 
 
 class TestHomePage:
@@ -17,4 +18,9 @@ class TestHomePage:
         response = home_page(request)
         expected_html = render_to_string('home.html')
         assert response.content.decode() == expected_html
+
+    def test_home_page_uploaded_file_is_csv(self):
+        request = HttpRequest()
+        request.method = 'POST'
+        request.FILES
 

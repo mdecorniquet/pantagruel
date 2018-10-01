@@ -1,3 +1,15 @@
 <html>
-    <title>Pantagruel</title>
+    <head>
+        <title>Pantagruel</title>
+    </head>
+    <body>
+        <h1>Import CSV</h1>
+        <label for "inputcsv">Fichier à importer:</label>
+        <form method="POST">
+            <input type="file"
+                id="id_new_item" name="inputcsv"
+                accept="text/csv" />
+            {% csrf_token %}
+        </form>
+    </body>
 </html>
