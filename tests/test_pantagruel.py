@@ -6,7 +6,7 @@ TESTCSV_FILENAME = os.path.join(os.path.dirname(__file__), 'sample.csv')
 class TestFunctionalWeb:
     def test_app_is_pantagruel(self, browser):
         assert os.path.isfile(TESTCSV_FILENAME)
-        browser.get('http://localhost:8000')
+        browser.get('http://localhost:8080')
         assert 'Pantagruel' in browser.title
         header_text = browser.find_element_by_tag_name('h1').text
         assert 'Import CSV' in header_text
